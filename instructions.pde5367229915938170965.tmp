@@ -1,0 +1,21 @@
+class instructions {
+  float x;
+  float y;
+  float z;
+  
+  instructions(float x, float y) {
+    this.x = x;
+    this.y = y + 50;
+  }
+  
+  void drawInstructions() {
+    beginShape();
+    vertex(this.x - 100, this.y + 100, 50);
+    vertex(this.x + 100, this.y + 100, 50);
+    vertex(this.x + 100, this.y - 100, 50);
+    vertex(this.x - 100, this.y - 100, 50);
+    fill(255, 255, 255);
+    endShape();
+    //text("Hello, world!", this.x, this.y, 0);
+  }
+}
